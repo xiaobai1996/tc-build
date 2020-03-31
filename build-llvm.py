@@ -254,7 +254,7 @@ def parse_parameters(root_folder):
     parser.add_argument("--additional-build-arguments",
                         help=textwrap.dedent("""\
                         You can add some more custom parameters for LLVM cmake. It will replace the default values,
-                        and affect the finnal stage only.
+                        and affect the final stage only.
                         To use this parameter, you must use \";\" as a separator between multiple arguments and also 
                         parameter and value are needed to be connected by \"=\"
 

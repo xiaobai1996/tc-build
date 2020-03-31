@@ -38,7 +38,8 @@ print "Start building LLVM"
 	--incremental \
 	--lto "thin" \
 	--targets "AArch64;ARM" \
-	--use-good-revision
+	--use-good-revision \
+ 	--additional-build-arguments "CLANG_REPOSITORY_STRING=GitHub.com/AtomSand"
 
 print "Start building binutils"
 ./build-binutils.py \
