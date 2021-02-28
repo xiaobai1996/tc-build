@@ -20,6 +20,7 @@ These scripts have been tested in a Docker image of the following distributions,
 
   ```
   apt install bc \
+              binutils-dev \
               bison \
               ca-certificates \
               ccache \
@@ -48,6 +49,7 @@ These scripts have been tested in a Docker image of the following distributions,
 
   ```
   dnf install bc \
+              binutils-devel \
               bison \
               ccache \
               clang \
@@ -107,6 +109,18 @@ bfd plugin: LLVM gold plugin has failed to create LTO module: Unknown attribute 
 ```
 
 Having a standalone copy of binutils (ideally in the same folder at the LLVM toolchain so that only one `PATH` modification is needed) works around this without any adverse side effects. Another workaround is bind mounting the new `LLVMgold.so` to `/usr/lib/LLVMgold.so`.
+
+## Contributing
+
+This repository openly welcomes pull requests! There are a few presubmit checks that run to make sure the code stays consistently formatted and free of bugs.
+
+1. All Python files must be passed through [`yapf`](https://github.com/google/yapf). See the installation section for how to get it (it may also be available through your package manager).
+
+2. All shell files must be passed through [`shfmt`](https://github.com/mvdan/sh) (specifically `shfmt -ci -i 4 -w`) and emit no [`shellcheck`](https://github.com/koalaman/shellcheck) warnings.
+
+The presubmit checks will do these things for you and fail if the code is not formatted properly or has a shellcheck warning. Running these tools on the command line before submitting will make it easier to get your code merged.
+
+Additionally, please write a detailed commit message about why you are submitting your change.
 
 ## Getting help
 
