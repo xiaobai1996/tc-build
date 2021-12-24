@@ -13,6 +13,7 @@ print "Start building LLVM"
 	--build-type "Release" \
 	--clang-vendor "atomsand-$(date +%D)" \
 	--incremental \
+	--lto "thin" \
 	--targets "AArch64;ARM"
 
 print "Start building binutils"
