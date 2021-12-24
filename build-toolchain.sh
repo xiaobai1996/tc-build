@@ -14,8 +14,7 @@ print "Start building LLVM"
 	--clang-vendor "atomsand-$(date +%D)" \
 	--incremental \
 	--lto "thin" \
-	--targets "AArch64;ARM" \
-	--shallow-clone
+	--targets "AArch64;ARM"
 
 print "Start building binutils"
 ./build-binutils.py \
