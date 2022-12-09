@@ -13,6 +13,7 @@ print "Start building LLVM"
 	--build-type "Release" \
 	--clang-vendor "atomsand-$(date +%D)" \
 	--incremental \
+	--use-good-revision\
 	--lto "thin" \
 	--targets "AArch64;ARM"
 
