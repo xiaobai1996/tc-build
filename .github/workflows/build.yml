@@ -2,7 +2,7 @@ name: Build test
 on:
   push:
     branches:
-      - master
+      - master_good
 jobs:
   build-test:
     runs-on: ubuntu-latest
